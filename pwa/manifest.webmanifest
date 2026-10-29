@@ -1,0 +1,29 @@
+{
+  "name": "DSH Remote Control",
+  "short_name": "DSH Remote",
+  "description": "Pair a phone with a local DeepSeek Harness session: live transcript, prompts, cancel and approvals.",
+  "id": "/rc/",
+  "start_url": "/rc/",
+  "scope": "/rc/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f9fafb",
+  "theme_color": "#4176e6",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["developer", "productivity"],
+  "icons": [
+    {
+      "src": "/rc/dsh-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/rc/dsh-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

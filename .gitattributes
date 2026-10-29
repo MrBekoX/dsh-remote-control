@@ -1,0 +1,17 @@
+# Normalize every text file to LF in the repository and in working trees.
+#
+# The committed dist/ artifacts are rebuilt and diffed in CI (`git status
+# --porcelain dist` must stay empty), so a Windows checkout with
+# core.autocrlf=true must not smudge generated files into CRLF. Binary assets
+# are listed explicitly so Git never treats them as text.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.zip binary

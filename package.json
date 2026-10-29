@@ -1,0 +1,67 @@
+{
+  "name": "dsh-remote-control",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Remote Control for local DeepSeek Harness sessions: a paired phone/PWA becomes a second client (session list, live transcript, prompt/steer, cancel, approval relay).",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19",
+    "dsh": ">=0.2.1-rc.3 <0.3.0"
+  },
+  "main": "./dist/host/index.js",
+  "exports": {
+    ".": "./dist/host/index.js",
+    "./client": "./dist/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "SECURITY.md",
+    "PROTOCOL.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.host.json --noEmit && tsc -p tsconfig.client.json --noEmit && tsc -p tsconfig.pwa.json --noEmit && tsc -p tsconfig.tests.json --noEmit",
+    "build": "pnpm run build:host && pnpm run build:client && pnpm run build:pwa && pnpm run build:tests",
+    "build:host": "tsc -p tsconfig.host.json",
+    "build:client": "node scripts/build-client.mjs",
+    "build:pwa": "node scripts/build-pwa.mjs",
+    "build:tests": "tsc -p tsconfig.tests.json",
+    "test": "node --test \"dist/tests/*.test.js\"",
+    "contract": "node scripts/contract-check.mjs",
+    "pack-check": "node scripts/pack-check.mjs",
+    "verify": "pnpm run typecheck && pnpm run build && pnpm run test && pnpm run pack-check"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.5",
+    "qrcode": "1.5.4",
+    "ws": "8.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.0",
+    "@types/qrcode": "1.5.5",
+    "@types/react": "19.0.0",
+    "@types/ws": "8.18.1",
+    "esbuild": "0.25.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------------------
+# dsh-remote-control — repository hygiene.
+#
+# The remote repository ships ONLY the product source of this plugin.
+# Task inputs, research notes, scratch evidence, local reports, dependencies
+# and build caches stay out of version control.
+# ---------------------------------------------------------------------------
+remote-control-methods-prompts/
+# Dependency and package-manager state
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-error.log*
+
+# TypeScript incremental state
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Task inputs and analysis artifacts (NOT part of the shipped plugin)
+# ---------------------------------------------------------------------------
+/research/
+/PROMPT.md
+/DEVELOPMENT_WORKFLOW.md
+/remote-control-verification.md
+/scratch/
+/tmp/
+/.tmp/
+*.local.md
+
+# Local environment, secrets and certificates
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+.credentials.yaml
+
+# Logs and runtime capture
+*.log
+logs/
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+*.lcov
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local package output (dist/ IS committed on purpose: local `link:` installs
+# must work without running a build; see README "Build artifacts").
+*.tgz

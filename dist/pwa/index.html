@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; frame-ancestors 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#151517" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="DSH Remote Control — pair this phone with a local DeepSeek Harness session." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="DSH Remote" />
+    <title>DSH Remote Control</title>
+    <link rel="manifest" href="/rc/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/rc/dsh-icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/rc/dsh-icon.png" />
+    <link rel="stylesheet" href="/rc/app.css" />
+  </head>
+  <body>
+    <div id="app" class="app"></div>
+    <div id="approval-root" class="approval-root" hidden></div>
+    <noscript>
+      <p class="noscript">DSH Remote Control needs JavaScript enabled.</p>
+    </noscript>
+    <script type="module" src="/rc/app.js"></script>
+  </body>
+</html>

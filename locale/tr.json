@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Uzaktan Kontrol",
+    "description": "Bu yerel DeepSeek Harness oturumuna telefonunuzu Cloudflare, SSH veya LAN üzerinden eşleyin: canlı transcript, prompt, iptal ve onaylar. İncelenebilir bağlantı planları, SHA-256 ile doğrulanan cloudflared indirmesi, tek etkin cihaz kilidi, denetim kaydı ve acil durdurma."
+  }
+}

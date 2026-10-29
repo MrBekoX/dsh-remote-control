@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="DSH Remote Control">
+  <defs>
+    <linearGradient id="rc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#0b3d91"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="url(#rc-bg)"/>
+  <rect x="40" y="22" width="40" height="72" rx="9" fill="none" stroke="#ffffff" stroke-width="6"/>
+  <circle cx="60" cy="84" r="4.5" fill="#ffffff"/>
+  <path d="M92 44c6 6 6 20 0 26" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M103 34c11 11 11 35 0 46" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+</svg>

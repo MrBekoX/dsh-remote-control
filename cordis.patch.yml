@@ -1,0 +1,21 @@
+# Out-of-tree Cordis bundle for DSH Remote Control.
+#
+# One insert is enough: the client half of the plugin is discovered from the
+# same Loader entry through the package `dsh.client` manifest field.
+#
+# The install row keeps the master switch deliberately OFF. `remoteMutations`
+# and `approvalRelay` are enabled by this bundle row so that, once the user
+# turns Remote Control on from Settings, the phone is a full operator instead of
+# a read-only viewer. `autoStart:false` means a previously enabled listener does
+# not come back automatically after a restart unless the user opts in.
+- insert:
+    - id: dsh-remote-control
+      name: dsh-remote-control
+      config:
+        enabled: false
+        autoStart: false
+        remoteMutations: true
+        approvalRelay: true
+        tunnel:
+          enabled: false
+          mode: quick

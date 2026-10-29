@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Remote Control",
+    "description": "Pair a phone with this local DeepSeek Harness session over Cloudflare, SSH or LAN: live transcript, prompts, cancel and approvals. Reviewed connection plans, SHA-256-verified cloudflared download, single-active-device lock, audit log and emergency stop."
+  }
+}
